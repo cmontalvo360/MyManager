@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainScreen">
+   <children>
+      <Pane layoutX="477.0" layoutY="49.0" prefHeight="285.0" prefWidth="464.0" style="-fx-border-color: black; -fx-border-radius: 10; -fx-border-width: 1;" />
+      <Pane layoutX="29.0" layoutY="49.0" prefHeight="285.0" prefWidth="428.0" style="-fx-border-radius: 10; -fx-border-color: black;">
+         <children>
+            <Button layoutX="222.0" layoutY="248.0" mnemonicParsing="false" onAction="#onAddPartBtnClick" prefHeight="25.0" prefWidth="50.0" text="Add" />
+            <Button layoutX="284.0" layoutY="248.0" mnemonicParsing="false" onAction="#onModifyPartBtnClick" prefHeight="25.0" prefWidth="54.0" text="Modify" />
+            <Button layoutX="347.0" layoutY="248.0" mnemonicParsing="false" onAction="#onDeletePartBtnClick" text="Delete" />
+         </children>
+      </Pane>
+      <TableView fx:id="partsTable" editable="true" layoutX="49.0" layoutY="89.0" prefHeight="200.0" prefWidth="388.0">
+        <columns>
+          <TableColumn fx:id="idCol" prefWidth="75.0" text="Part ID" />
+          <TableColumn fx:id="nameCol" prefWidth="75.0" text="Part Name" />
+            <TableColumn fx:id="inventoryLevelCol" prefWidth="103.0" text="Inventory Level" />
+            <TableColumn fx:id="costCol" prefWidth="117.0" text="Price/Cost per Unit" />
+        </columns>
+      </TableView>
+      <TableView fx:id="productsTable" layoutX="490.0" layoutY="89.0" prefHeight="200.0" prefWidth="435.0">
+        <columns>
+          <TableColumn fx:id="productIdCol" prefWidth="75.0" text="Product ID" />
+          <TableColumn fx:id="productNameCol" prefWidth="100.0" text="Product Name" />
+            <TableColumn fx:id="productStockCol" prefWidth="99.0" text="Inventory Level" />
+            <TableColumn fx:id="productPriceCol" prefWidth="128.0" text="Price/Cost per Unit" />
+        </columns>
+      </TableView>
+      <Label layoutX="37.0" layoutY="14.0" prefHeight="27.0" prefWidth="267.0" text="Inventory Managment System">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="partSearchBox" layoutX="275.0" layoutY="61.0" onKeyTyped="#partKeyTypedSearch" promptText="Search by PartID or Name" />
+      <Label layoutX="56.0" layoutY="65.0" prefHeight="17.0" prefWidth="85.0" text="Parts">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="500.0" layoutY="65.0" prefHeight="17.0" prefWidth="56.0" text="Products">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Button layoutX="762.0" layoutY="355.0" mnemonicParsing="false" onAction="#onExitBtnClick" prefHeight="25.0" prefWidth="66.0" text="Exit" />
+      <TextField fx:id="productSearchBox" layoutX="742.0" layoutY="61.0" onKeyTyped="#productKeyTypedSearch" promptText="Search by ProductID or Name" />
+      <Button layoutX="742.0" layoutY="297.0" mnemonicParsing="false" onAction="#onAddProductBtnClick" prefHeight="25.0" prefWidth="51.0" text="Add" />
+      <Button layoutX="802.0" layoutY="297.0" mnemonicParsing="false" onAction="#onModifyProductBtnClick" text="Modify" />
+      <Button layoutX="865.0" layoutY="297.0" mnemonicParsing="false" onAction="#onDeleteProductBtnClick" text="Delete" />
+      <Label fx:id="errorLabel" layoutX="401.0" layoutY="359.0" prefHeight="17.0" prefWidth="248.0" />
+   </children>
+</AnchorPane>
