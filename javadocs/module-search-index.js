@@ -1,1 +1,0 @@
-moduleSearchIndex = [{"l":"com.example.mymanager"}];updateSearchResults();
