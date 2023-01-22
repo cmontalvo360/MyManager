@@ -3,7 +3,6 @@
 ### Technologies: Java, JavaFX
 
 
-
 This is the main screen where lists of parts and products are displayed 
 ![main screen image](./images/IMS-Main.png)
 
