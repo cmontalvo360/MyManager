@@ -1,4 +1,4 @@
-# MyManager is an appilcation that manages inventory of parts and products.
+## MyManager is an appilcation that manages inventory of parts and products.
 
 ### Technologies: Java, JavaFX
 ---
