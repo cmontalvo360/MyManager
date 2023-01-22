@@ -1,4 +1,4 @@
-# MyManager is an appilcation that manages inventory of parts for a company.
+# MyManager is an appilcation that manages inventory of parts and products.
 
 This is the main screen where lists of parts and products are displayed 
 ![main screen image](./images/IMS-Main.png)
